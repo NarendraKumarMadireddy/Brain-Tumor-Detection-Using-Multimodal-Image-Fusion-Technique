@@ -1,5 +1,5 @@
-Procrustes analysis
-Aims to align 2 sets of points (in other words, 2 shapes) to minimize square distance between them by removing scale, translation and rotation warp components.
+#Procrustes analysis
+#Aims to align 2 sets of points (in other words, 2 shapes) to minimize square distance between them by removing scale, translation and rotation warp components.
 
 def procrustes(X, Y, scaling=True, reflection='best'):
     """
