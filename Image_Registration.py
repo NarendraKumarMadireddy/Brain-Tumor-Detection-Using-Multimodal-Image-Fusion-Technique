@@ -1,6 +1,14 @@
 #Procrustes analysis
 #Aims to align 2 sets of points (in other words, 2 shapes) to minimize square distance between them by removing scale, translation and rotation warp components.
 
+'''To align MRI and CT images, I implemented Procrustes analysis, which minimizes the distance
+between selected feature points on each image. After loading the images, I selected five key points
+manually from each. Using Procrustes analysis, I computed a transformation matrix that aligns the
+MRI points to the CT points by adjusting for translation, scaling, and rotation differences. Finally, I
+applied this transformation to the entire MRI image, achieving an alignment with the CT image that’s
+saved for further analysis. This process is useful in medical imaging for comparing structures across
+different scan modalities accurately.'''
+
 def procrustes(X, Y, scaling=True, reflection='best'):
     """
     A port of MATLAB's `procrustes` function to Numpy.
